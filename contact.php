@@ -30,35 +30,43 @@
         <div class="row">
             <div class="col-lg-6 col-md-6 mb-5 px-4">
                 <div class="bg-white rounded shadow p-4">
-                    <iframe class="w-100 rounded mb-4" height="350" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31742.219198304098!2d80.77904106538206!3d6.025263831139207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae14afd19b00141%3A0x4045d305f7526bba!2sTangalle!5e0!3m2!1sen!2slk!4v1753277480521!5m2!1sen!2slk"></iframe>
+                    <iframe class="w-100 rounded mb-4" height="350" src="<?php echo $contact_r['iframe'] ?>"> </iframe>
 
                     <h5>Address</h5>
-                    <a href="https://maps.app.goo.gl/KP92PNKsS3492ikQA" target="_blank" class="d-inline-block text-decoration-none text-dark mb-4">
-                        <i class="bi bi-geo-alt-fill"></i> No. 27, Miryakanda Road, Tangalle
+                    <a href="<?php echo $contact_r['gmap']?>" target="_blank" class="d-inline-block text-decoration-none text-dark mb-4">
+                        <i class="bi bi-geo-alt-fill"></i> <?php echo $contact_r['address']?>
                     </a>
 
                     <h5>Call us</h5>
-                    <a href="tel: +94 472 241 766" class="d-inline-block mb-2 text-decoration-none text-dark">
-                        <i class="bi bi-telephone-fill"></i> +94 472 241 766
+                    <a href="tel: +<?php echo $contact_r['pn1']?>" class="d-inline-block mb-2 text-decoration-none text-dark">
+                        <i class="bi bi-telephone-fill"></i> <?php echo $contact_r['pn1']?>
                     </a>
                     <br>
-                    <a href="tel: +94 778 888 999" class="d-inline-block text-decoration-none text-dark">
-                        <i class="bi bi-telephone-fill"></i> +94 778 888 999
+                    <a href="tel: +<?php echo $contact_r['pn2']?>" class="d-inline-block text-decoration-none text-dark">
+                        <i class="bi bi-telephone-fill"></i> <?php echo $contact_r['pn2']?>
                     </a>
 
                     <h5 class="mt-4">Email</h5>
-                    <a href="https://gmail.com" target="_blank" class="d-inline-block text-decoration-none text-dark mb-4">
-                        <i class="bi bi-envelope-fill"></i> info@zenviahotel.com
+                    <a href="<?php echo $contact_r['email']?>" target="_blank" class="d-inline-block text-decoration-none text-dark mb-4">
+                        <i class="bi bi-envelope-fill"></i> <?php echo $contact_r['email']?>
                     </a>
 
-                     <h5>Follow us</h5>
-                    <a href="https://twitter.com" target="_blank" class="d-inline-block text-dark fs-5 me-2">
-                        <i class="bi bi-twitter me-1"></i>
-                    </a>
-                    <a href="https://facebook.com" target="_blank" class="d-inline-block text-dark fs-5 me-2">
+                    <h5>Follow us</h5>
+                    <?php
+                        if($contact_r["tw"] != "") {
+                            echo <<<data
+                            <a href="$contact_r[tw]" target="_blank" class="d-inline-block mb-3">
+                                <span class="badge bg-light text-dark fs-6 p-2">
+                                <i class="bi bi-twitter me-1"></i> Twitter
+                                </span>
+                            </a>
+                            data;
+                        }
+                    ?>
+                    <a href="<?php echo $contact_r['fb']?>" target="_blank" class="d-inline-block text-dark fs-5 me-2">
                         <i class="bi bi-facebook me-1"></i>
                     </a>
-                    <a href="https://instagram.com" target="_blank" class="d-inline-block text-dark fs-5">
+                    <a href="<?php echo $contact_r['insta']?>" target="_blank" class="d-inline-block text-dark fs-5">
                         <i class="bi bi-instagram me-1"></i>
                     </a>
                 </div>

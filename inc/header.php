@@ -1,6 +1,17 @@
+<?php
+    require("admin/inc/db_config.php");
+    require("admin/inc/essentials.php");
+
+    $contact_q = "SELECT * FROM `contact_details` WHERE `sr_no`=?";
+    $values = [1];
+    $contact_r = mysqli_fetch_assoc(select($contact_q, $values, "i"));
+?>
+
+
+
 <!-------------------- Navigation Bar -------------------->
 
-<nav class="navbar navbar-expand-lg bg-white px-lg-4 py-lg-1 shadow-sm sticky-top">
+<nav id="nav-bar" class="navbar navbar-expand-lg bg-white px-lg-4 py-lg-1 shadow-sm sticky-top">
     <div class="container-fluid">
         <a class="navbar-brand me-5 px-3 fw-bold fs-3 h-font" href="index.php"><img src="Images/Logo.png" class="img-fluid me-2" style="width: 45px; height: auto;" alt="Logo">Zenvia</a>
         <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,7 +21,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 px-3">
 
                 <li class="nav-item">
-                    <a class="nav-link active me-2" aria-current="page" href="index.php">Home</a>
+                    <a class="nav-link me-2" href="index.php">Home</a>
                 </li>
 
                 <li class="nav-item">

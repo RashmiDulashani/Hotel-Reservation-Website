@@ -21,9 +21,10 @@
         </div>
         <div class="col-lg-4 col-md-4  p-4">
             <h5 class="mb-3">Follow us</h5>
-            <a href="https://twitter.com" target="_blank" class="d-inline-block mb-3 text-dark text-decoration-none"><i class="bi bi-twitter me-1"></i> Twitter</a> <br>
-            <a href="https://facebook.com" target="_blank" class="d-inline-block mb-3 text-dark text-decoration-none"><i class="bi bi-facebook me-1"></i> Facebook</a> <br>
-            <a href="https://instagram.com" target="_blank" class="d-inline-block mb-3 text-dark text-decoration-none"><i class="bi bi-instagram me-1"></i> Instagram</a>
+
+            <a href="$contact_r[tw]" class="d-inline-block mb-3 text-dark text-decoration-none"><i class="bi bi-twitter me-1"></i> Twitter </a> <br>
+            <a href="<?php echo $contact_r['fb']?>" target="_blank" class="d-inline-block mb-3 text-dark text-decoration-none"><i class="bi bi-facebook me-1"></i> Facebook</a> <br>
+            <a href="<?php echo $contact_r['insta']?>" target="_blank" class="d-inline-block mb-3 text-dark text-decoration-none"><i class="bi bi-instagram me-1"></i> Instagram</a>
 
         </div>
     </div>
@@ -33,3 +34,26 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Navigation Bar -->
+<!-- <script>
+
+    function setActive()
+    {
+        let navbar = document.getElementById("nav-bar");
+        let a_tags = navbar.getElementsByTagName("a");
+
+        for(let i=0; i<a_tags.length; i++)
+        {
+            let file = a_tags[i].href.split("/").pop();
+            let file_name = file.split(".")[0];
+
+            if(document.location.href.indexOf(file_name) >= 0) {
+                a_tags[i].classList.add("active");
+            }
+        }
+    }
+
+    setActive();
+
+</script> -->

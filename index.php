@@ -332,30 +332,37 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-8 p-4 mb-lg-0 mb-3 bg-white rounded">
-                <iframe class="w-100 rounded" height="350" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31742.219198304098!2d80.77904106538206!3d6.025263831139207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae14afd19b00141%3A0x4045d305f7526bba!2sTangalle!5e0!3m2!1sen!2slk!4v1753277480521!5m2!1sen!2slk"></iframe>
+                <iframe class="w-100 rounded" height="350" src="<?php echo $contact_r['iframe']?>"></iframe>
             </div>
             <div class="col-lg-4 col-md-4">
                 <div class="bg-white p-4 mb-4 rounded">
                     <h5>Call us</h5>
-                    <a href="tel: +94 472 241 766" class="d-inline-block mb-2 text-decoration-none text-dark"><i class="bi bi-telephone-fill"></i> +94 472 241 766</a>
+                    <a href="tel: +94 472 241 766" class="d-inline-block mb-2 text-decoration-none text-dark"><i class="bi bi-telephone-fill"></i> +<?php echo $contact_r["pn1"]?> </a>
                     <br>
-                    <a href="tel: +94 778 888 999" class="d-inline-block mb-2 text-decoration-none text-dark"><i class="bi bi-telephone-fill"></i> +94 778 888 999</a>
+                    <a href="tel: +94 778 888 999" class="d-inline-block mb-2 text-decoration-none text-dark"><i class="bi bi-telephone-fill"></i> +<?php echo $contact_r["pn2"]?> </a>
                 </div>
                 <div class="bg-white p-4 mb-4 rounded">
                     <h5>Follow us</h5>
-                    <a href="https://twitter.com" target="_blank" class="d-inline-block mb-3">
-                        <span class="badge bg-light text-dark fs-6 p-2">
-                            <i class="bi bi-twitter me-1"></i> Twitter
-                        </span>
-                    </a>
+                    <?php
+                        if($contact_r["tw"] != "") {
+                            echo <<<data
+                            <a href="$contact_r[tw]" target="_blank" class="d-inline-block mb-3">
+                                <span class="badge bg-light text-dark fs-6 p-2">
+                                <i class="bi bi-twitter me-1"></i> Twitter
+                                </span>
+                            </a>
+                            data;
+                        }
+                    ?>
+                    
                     <br>
-                    <a href="https://facebook.com" target="_blank" class="d-inline-block mb-3">
+                    <a href="<?php echo $contact_r['fb']?>" target="_blank" class="d-inline-block mb-3">
                         <span class="badge bg-light text-dark fs-6 p-2">
                             <i class="bi bi-facebook me-1"></i> Facebook
                         </span>
                     </a>
                     <br>
-                    <a href="https://instagram.com" target="_blank" class="d-inline-block">
+                    <a href="<?php echo $contact_r['insta']?>" target="_blank" class="d-inline-block">
                         <span class="badge bg-light text-dark fs-6 p-2">
                             <i class="bi bi-instagram me-1"></i> Instagram
                         </span>
