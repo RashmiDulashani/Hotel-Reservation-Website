@@ -4,11 +4,13 @@
 
     define("SITE_URL", "http://127.0.0.1/Hotel Reservation Website/");
     define("ABOUT_IMG_PATH", SITE_URL."Images/About/");
+    define("CAROUSEL_IMG_PATH", SITE_URL."Images/Carousel/");
 
     // Backend Upload Process needs this Data
 
     define("UPLOAD_IMAGE_PATH", $_SERVER["DOCUMENT_ROOT"]."/Hotel Reservation Website/Images/");
-    define("ABOUT_FOLDER", "about/");
+    define("ABOUT_FOLDER", "About/");
+    define("CAROUSEL_FOLDER", "Carousel/");
 
     function adminLogin()
      {
