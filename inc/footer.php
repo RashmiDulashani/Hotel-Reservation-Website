@@ -21,8 +21,16 @@
         </div>
         <div class="col-lg-4 col-md-4  p-4">
             <h5 class="mb-3">Follow us</h5>
-
-            <a href="$contact_r[tw]" class="d-inline-block mb-3 text-dark text-decoration-none"><i class="bi bi-twitter me-1"></i> Twitter </a> <br>
+            <?php
+                if($contact_r["tw"] != "") {
+                    echo <<<data
+                    <a href="$contact_r[tw]" target="_blank" class="d-inline-block mb-3 text-dark text-decoration-none">
+                        <i class="bi bi-twitter me-1"></i> Twitter
+                    </a>
+                    data;
+                }
+            ?>
+            <br>
             <a href="<?php echo $contact_r['fb']?>" target="_blank" class="d-inline-block mb-3 text-dark text-decoration-none"><i class="bi bi-facebook me-1"></i> Facebook</a> <br>
             <a href="<?php echo $contact_r['insta']?>" target="_blank" class="d-inline-block mb-3 text-dark text-decoration-none"><i class="bi bi-instagram me-1"></i> Instagram</a>
 
@@ -35,8 +43,8 @@
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Navigation Bar -->
-<!-- <script>
+<!-- Navigation Bar Active -->
+<script>
 
     function setActive()
     {
@@ -56,4 +64,4 @@
 
     setActive();
 
-</script> -->
+</script>

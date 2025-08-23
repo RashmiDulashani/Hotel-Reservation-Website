@@ -39,8 +39,11 @@
     <?php
 
     /* This code checks login credentials after the login form is submitted.
-    If the username and password match what's in the database, the user is logged in and sent to the dashboard.
-    If not, it shows an error message. */
+       If the username and password match what's in the database, the user is logged in and sent to the dashboard.
+       If not, it shows an error message. */
+
+    /* The action tells the form where to send the data when submitted.
+       The method tells the form how to send the data (GET or POST). */
 
         if(isset($_POST["login"])) {
             $frm_data = filteration($_POST);

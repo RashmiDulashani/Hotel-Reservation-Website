@@ -37,7 +37,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link me-" href="#">Gallery</a>
+                    <a class="nav-link me-" href="gallery.php">Gallery</a>
                 </li>
 
                 <li class="nav-item">

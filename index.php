@@ -354,7 +354,6 @@
                             data;
                         }
                     ?>
-                    
                     <br>
                     <a href="<?php echo $contact_r['fb']?>" target="_blank" class="d-inline-block mb-3">
                         <span class="badge bg-light text-dark fs-6 p-2">

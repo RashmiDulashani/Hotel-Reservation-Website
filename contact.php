@@ -57,7 +57,7 @@
                             echo <<<data
                             <a href="$contact_r[tw]" target="_blank" class="d-inline-block mb-3">
                                 <span class="badge bg-light text-dark fs-6 p-2">
-                                <i class="bi bi-twitter me-1"></i> Twitter
+                                <i class="bi bi-twitter me-1"></i>
                                 </span>
                             </a>
                             data;
