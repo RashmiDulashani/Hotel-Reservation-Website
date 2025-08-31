@@ -5,12 +5,14 @@
     define("SITE_URL", "http://127.0.0.1/Hotel Reservation Website/");
     define("ABOUT_IMG_PATH", SITE_URL."Images/About/");
     define("CAROUSEL_IMG_PATH", SITE_URL."Images/Carousel/");
+    define("FACILITIES_IMG_PATH", SITE_URL."Images/Facilities/");
 
     // Backend Upload Process needs this Data
 
     define("UPLOAD_IMAGE_PATH", $_SERVER["DOCUMENT_ROOT"]."/Hotel Reservation Website/Images/");
     define("ABOUT_FOLDER", "About/");
     define("CAROUSEL_FOLDER", "Carousel/");
+    define("FACILITIES_FOLDER", "Facilities/");
 
     function adminLogin()
      {
@@ -68,6 +70,29 @@
         }
         else {
             return false;
+        }
+    }
+
+    function uploadSVGImage($image, $folder) {
+        $valid_mime = ["image/svg+xml"];
+        $img_mime = $image["type"];
+
+        if(!in_array($img_mime, $valid_mime)) {
+            return "inv_img";  // Invalid Image Mime or Format
+        }
+        else if ($image["size"]/(1024*1024)>2) {
+            return "inv_size";  // Invalid Size Greater than 1MB
+        }
+        else {
+            $ext = pathinfo($image["name"], PATHINFO_EXTENSION);
+            $rname = "IMG_".random_int(11111,99999).".$ext";
+            $img_path = UPLOAD_IMAGE_PATH.$folder.$rname;
+            if(move_uploaded_file($image["tmp_name"], $img_path)) {
+                return $rname;
+            }
+            else {
+                return "upd_failed";
+            }
         }
     }
 
