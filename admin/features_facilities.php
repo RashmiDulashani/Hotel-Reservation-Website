@@ -2,57 +2,6 @@
     require("inc/essentials.php");
     require("inc/db_config.php");
     adminLogin();
-
-    if(isset($_GET["seen"]))
-    {
-        $frm_data = filteration($_GET);
-
-        if($frm_data["seen"]=="all") {
-            $q ="UPDATE `user_queries` SET `seen`=?";
-            $values = [1];
-            if(update($q, $values, "i")) {
-                alert('success', 'Marked all as read!');
-            }
-            else {
-                alert('error', 'Operation Failed!');
-            }
-        }
-        else {
-            $q ="UPDATE `user_queries` SET `seen`=? WHERE `sr_no`=?";
-            $values = [1, $frm_data["seen"]];
-            if(update($q, $values, "ii")) {
-                alert('success', 'Marked as read!');
-            }
-            else {
-                alert('error', 'Operation Failed!');
-            }
-        }
-    }
-
-     if(isset($_GET["del"]))
-    {
-        $frm_data = filteration($_GET);
-
-        if($frm_data["del"]=="all") {
-            $q ="DELETE FROM `user_queries`";
-            if(mysqli_query($con,$q)) {
-                alert('success', 'All Data Deleted!');
-            }
-            else {
-                alert('error', 'Operation Failed!');
-            }
-        }
-        else {
-            $q ="DELETE FROM `user_queries` WHERE `sr_no`=?";
-            $values = [$frm_data["del"]];
-            if(delete($q, $values, "i")) {
-                alert('success', 'Data Deleted!');
-            }
-            else {
-                alert('error', 'Operation Failed!');
-            }
-        }
-    }
 ?>
 
 <!DOCTYPE html>
@@ -116,7 +65,7 @@
                         
                         <div class="table-responsive-md" style="height: 350px; overflow-y: scroll;">
                             <table class="table table-hover border">
-                                <thead>
+                                <thead class="sticky-top">
                                     <tr>
                                     <th scope="col" class="bg-dark text-light">#</th>
                                     <th scope="col" class="bg-dark text-light">Icon</th>
@@ -125,7 +74,7 @@
                                     <th scope="col" class="bg-dark text-light">Action</th>
                                     </tr>
                                 </thead>
-                                <tbody id="facilities-data">
+                                <tbody id="facilities-data" class="align-middle">
                                 </tbody>
                             </table>    
                         </div>
@@ -151,7 +100,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="reset" onclick="member_name.value='', member_picture.value=''" class="btn text-secondary shadow-none" data-bs-dismiss="modal">Cancel</button>
+                        <button type="reset" class="btn text-secondary shadow-none" data-bs-dismiss="modal">Cancel</button>
                         <button type="submit" class="btn custom-bg text-white shadow-none">Submit</button>
                     </div>
                 </div>
@@ -193,162 +142,9 @@
 
     <?php require("inc/scripts.php");?>
 
-    <script>
-        let feature_s_form = document.getElementById("feature_s_form");
-        let facility_s_form = document.getElementById("facility_s_form");
+    <script src="scripts/features_facilities.js"></script>
 
-        feature_s_form.addEventListener("submit", function(e) {
-        e.preventDefault();
-        add_feature();
-    });
-
-    function add_feature()
-    {
-        let data = new FormData();
-        data.append("name", feature_s_form.elements['feature_name'].value);
-        data.append("add_feature", "");
-
-        let xhr = new XMLHttpRequest();
-        xhr.open("POST", "ajax/features_facilities.php", true);
-
-        xhr.onload = function() {
-            var myModal = document.getElementById("feature-s")
-            var modal = bootstrap.Modal.getInstance(myModal);
-            modal.hide();
-
-            if(this.responseText == 1) {
-                alert("success", "New Feature Added!");
-                feature_s_form.elements['feature_name'].value = "";
-                get_features();
-            }
-            else if(this.responseText == "upd_failed") {
-                alert("error", "Server Down!");
-            }
-        }
-        xhr.send(data);
-    }
-
-
-    function get_features()
-    {
-        let xhr = new XMLHttpRequest();
-        xhr.open("POST", "ajax/features_facilities.php", true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-        xhr.onload = function() {
-            document.getElementById("features-data").innerHTML = this.responseText;
-        }
-
-        xhr.send("get_features");
-    }
-
-
-    function rem_feature(val)
-    {
-        let xhr = new XMLHttpRequest();
-        xhr.open("POST", "ajax/features_facilities.php", true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-        xhr.onload = function() {
-            if(this.responseText == 1) {
-                alert("success", "Feature Removed!");
-                get_features();
-            }
-            else if(this.responseText == "room_added") {
-                alert("error", "Feature is added in room!");
-            }
-            else {
-                alert("error", "Server Down!");
-            }
-        }
-
-        xhr.send("rem_feature="+val);
-    }
-
-    facility_s_form.addEventListener("submit", function(e) {
-        e.preventDefault();
-        add_facility();
-    });
-
-
-    function add_facility()
-    {
-        let data = new FormData();
-        data.append("name", facility_s_form.elements['facility_name'].value);
-        data.append("icon", facility_s_form.elements['facility_icon'].files[0]);
-        data.append("desc", facility_s_form.elements['facility_desc'].value);
-        data.append("add_facility", "");
-
-        let xhr = new XMLHttpRequest();
-        xhr.open("POST", "ajax/features_facilities.php", true);
-
-        xhr.onload = function() {
-            var myModal = document.getElementById("facility-s")
-            var modal = bootstrap.Modal.getInstance(myModal);
-            modal.hide();
-
-           if(this.responseText == "inv_img") {
-                alert("error", "Only SVG images are allowed!");
-            }
-            else if(this.responseText == "inv_size") {
-                alert("error", "Image should be less than 1MB!");
-            }
-            else if(this.responseText == "upd_failed") {
-                alert("error", "Image Upload Failed! Server Down!");
-            }
-            else {
-                alert("success", "New Facility Added!");
-                facility_s_form.reset();
-                get_facilities();
-            }
-        }
-        xhr.send(data);
-    }
-
-
-    function get_facilities()
-    {
-        let xhr = new XMLHttpRequest();
-        xhr.open("POST", "ajax/features_facilities.php", true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-        xhr.onload = function() {
-            document.getElementById("facilities-data").innerHTML = this.responseText;
-        }
-
-        xhr.send("get_facilities");
-    }
-
-
-    function rem_facility(val)
-    {
-        let xhr = new XMLHttpRequest();
-        xhr.open("POST", "ajax/features_facilities.php", true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-        xhr.onload = function() {
-            if(this.responseText == 1) {
-                alert("success", "Facility Removed!");
-                get_facilities();
-            }
-            else if(this.responseText == "room_added") {
-                alert("error", "Facility is added in room!");
-            }
-            else {
-                alert("error", "Server Down!");
-            }
-        }
-
-        xhr.send("rem_facility="+val);
-    }
-
-
-    window.onload = function() {
-        get_features();
-        get_facilities();
-    }
-
-    </script>
+    
 
 </body>
 </html>

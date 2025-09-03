@@ -73,7 +73,7 @@
             </div>
             <div class="col-lg-6 col-md-6 mb-5 px-4">
                 <div class="bg-white rounded shadow p-4">
-                    <form method="POST">
+                    <form method="POST" autocomplete="off">
                         <h5>Send a Message</h5>
                         <div class="mt-3">
                             <label class="form-label" style="font-weight: 500;">Name</label>
