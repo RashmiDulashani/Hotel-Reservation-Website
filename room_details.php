@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Zenvia Hotel - Room Details</title>
-
     <!-- CSS Links -->
     <?php require("inc/links.php");?>
+
+    <title><?php echo $setting_r['site_title'] ?> - Room Details</title>
 
 </head>
 

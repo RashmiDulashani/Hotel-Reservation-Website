@@ -11,3 +11,16 @@
 
 <!-- Link Custom CSS File -->
 <link rel="stylesheet" href="CSS/common.css?v=<?= time() ?>">
+
+
+<?php
+    require("admin/inc/db_config.php");
+    require("admin/inc/essentials.php");
+
+    $contact_q = "SELECT * FROM `contact_details` WHERE `sr_no`=?";
+    $setting_q = "SELECT * FROM `setting` WHERE `sr_no`=?";
+    $values = [1];
+    $contact_r = mysqli_fetch_assoc(select($contact_q, $values, "i"));
+    $setting_r = mysqli_fetch_assoc(select($setting_q, $values, "i"));
+?>
+
