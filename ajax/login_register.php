@@ -21,25 +21,13 @@
             exit;
         }
 
-        // Upload user image to server
-        $img = uploadUserImage($_FILES['profile']);
-
-        if($img == 'inv_img') {
-            echo 'inv_img';
-            exit;
-        }
-        else if($img == 'upd_failed') {
-            echo 'upd_failed';
-            exit;
-        }
-
         $enc_pass = password_hash($data['pass'], PASSWORD_BCRYPT);
 
-        $query = "INSERT INTO `user_cred`(`name`, `email`, `address`, `phonenum`, `pincode`, `dob`, `profile`, `pass`) VALUES (?,?,?,?,?,?,?,?)";
+        $query = "INSERT INTO `user_cred`(`name`, `email`, `address`, `phonenum`, `dob`, `password`) VALUES (?,?,?,?,?,?)";
 
-        $values = [$data['name'],$data['email'],$data['address'],$data['phonenum'],$data['pincode'],$data['dob'],$img,$enc_pass];
+        $values = [$data['name'],$data['email'],$data['address'],$data['phonenum'],$data['dob'],$enc_pass];
 
-        if(insert($query, $values, 'ssssssss')) {
+        if(insert($query, $values, 'ssssss')) {
             echo 1;
         }
         else {

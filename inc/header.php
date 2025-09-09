@@ -79,7 +79,7 @@
 <div class="modal fade" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <form id="register-form" action="" method="POST">
+            <form method="POST" id="register-form">
                 <div class="modal-header">
                     <h5 class="modal-title d-flex align-items-center"><i class="bi bi-person-lines-fill fs-3 me-3"></i>User Registration</h5>
                     <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -103,20 +103,12 @@
                                 <input name="phonenum" type="number" class="form-control shadow-none" required>
                             </div>
                             <div class="col-md-6 p-0 mb-3">
-                                <label class="form-label">Picture</label>
-                                <input name="profile" type="file" accept=".jpg, .jpeg, .png, .webp" class="form-control shadow-none">
+                                <label class="form-label">Date of Birth</label>
+                                <input name="dob" type="date" class="form-control shadow-none" required>
                             </div>
                             <div class="col-md-12 p-0 mb-3">
                                 <label class="form-label">Address</label>
                                 <textarea name="address" class="form-control shadow-none" rows="1" required></textarea>
-                            </div>
-                            <div class="col-md-6 ps-0 mb-3">
-                                <label class="form-label">Pincode</label>
-                                <input name="pincode" type="number" class="form-control shadow-none" required>
-                            </div>
-                            <div class="col-md-6 p-0 mb-3">
-                                <label class="form-label">Date of Birth</label>
-                                <input name="dob" type="date" class="form-control shadow-none" required>
                             </div>
                             <div class="col-md-6 ps-0 mb-3">
                                 <label class="form-label">Password</label>
@@ -129,7 +121,7 @@
                         </div>
                     </div>
                     <div class="text-center my-1">
-                        <button name='register' type="submit" class="btn btn-dark shadow-none">Register</button>
+                        <button name="register" type="submit" class="btn btn-dark shadow-none">Register</button>
                     </div>
                 </div>
             </form>
