@@ -141,8 +141,14 @@
                                 </div>
                             area;
 
+                            $book_btn = "";
+
+                            if(!$setting_r['shutdown']) {
+                                $book_btn = "<a href='#' class='btn w-100 text-white custom-bg shadow-none mb-1'>Book Now</a>";
+                            }
+
                             echo <<<book
-                                <a href="#" class="btn w-100 text-white custom-bg shadow-none mb-1">Book Now</a>
+                                $book_btn
 
                             book;
                         ?>
