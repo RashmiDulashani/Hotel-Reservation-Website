@@ -26,19 +26,32 @@
 
     <?php require("inc/header.php");?>
 
+    <!-------------------- Hero Carousel -------------------->
+
+    <div class="container-fluid px-0">
+        <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide d-flex align-items-center justify-content-center text-center text-white" style="background-image: url('Images/Carousel/4.png');"></div>
+                <div class="swiper-slide d-flex align-items-center justify-content-center text-center text-white" style="background-image: url('Images/Carousel/6.png');"></div>
+                <div class="swiper-slide d-flex align-items-center justify-content-center text-center text-white" style="background-image: url('Images/Carousel/5.png');"></div>
+            </div>
+
+            <div class="hero-text position-absolute top-50 start-50 translate-middle text-center text-white">
+                <h1 class="display-4 fw-bold">About Us</h1>
+                <p class="lead mt-3">Luxury, comfort, and exceptional service combine for unforgettable stays!</p>
+            </div>
+        </div>
+    </div>
+
     <div class="my-5 px-4">
-        <h2 class="h-font fw-bold text-center">About Us</h2>
-        <p class="text-center mt-3">Lorem ipsum, dolor sit amet <br> consectetur adipisicing elit. Voluptatum labore, rem omnis impedit rerum incidunt excepturi 
-            porro ea hic reiciendis.</p>
+        <h2 class="h-font fw-bold text-center">Message from Our Chairman</h2>
     </div>
 
     <div class="container">
         <div class="row justify-content-between align-items-center">
-            <div class="col-lg-6 col-md-5 mb-4 order-2 order-lg-1 order-md-1">
-                <h3 mb-3>Lorem ipsum dolor sit.</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, ipsa commodi nisi eos dicta possimus facere?
-                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate voluptas velit debitis, sunt modi sint! Rerum.
-                </p>
+            <div class="col-lg-6 col-md-5 mb-4 order-2 order-lg-1 order-md-1 msg">
+                <p>“Welcome to Zenvia, where our passion for hospitality and commitment to excellence create unforgettable experiences. With decades of dedication to guest satisfaction, we strive to offer comfort, elegance, and personalized service that makes every stay truly remarkable.</p>
+                <p>With decades of experience in the hospitality industry, our team is committed to excellence at every level. From luxurious accommodations to attentive service, we strive to exceed expectations and ensure that each visit is as remarkable as it is relaxing.”</p>
             </div>
             <div class="col-lg-5 col-md-5 mb-4 order-1 order-lg-2 order-md-1">
                 <img src="Images/About/about.jpg" class="w-100">
@@ -90,7 +103,7 @@
                         echo <<<data
                             <div class="swiper-slide bg-white rounded text-center">
                                 <img src="$path$row[picture]" class="w-100">
-                                <h5 class="mt-3">$row[name]</h5>
+                                <h6 class="mt-3">$row[name]</h6>
                             </div>
                         data;
                     }
@@ -102,13 +115,15 @@
     </div>
 
     
-    
     <!-------------------- Footer -------------------->
 
     <?php require("inc/footer.php");?>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-------------------- Initializing Hero Swiper -------------------->
+    <script src="swiper.js"></script>
 
     <!-- Initialize Swiper -->
     <script>

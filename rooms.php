@@ -9,6 +9,9 @@
 
     <title><?php echo $setting_r['site_title'] ?>  - Rooms</title>
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
 </head>
 
 <body class="bg-light">
@@ -17,8 +20,27 @@
 
     <?php require("inc/header.php");?>
 
+     <!-------------------- Hero Carousel -------------------->
+
+    <div class="container-fluid px-0">
+        <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide d-flex align-items-center justify-content-center text-center text-white" style="background-image: url('Images/Rooms/1.jpg'); linear-gradient(rgba(12, 74, 110, 0.7), rgba(12, 74, 110, 0.7))"></div>
+                <div class="swiper-slide d-flex align-items-center justify-content-center text-center text-white" style="background-image: url('Images/Rooms/2.png');"></div>
+                <div class="swiper-slide d-flex align-items-center justify-content-center text-center text-white" style="background-image: url('Images/Rooms/3.png');"></div>
+                <div class="swiper-slide d-flex align-items-center justify-content-center text-center text-white" style="background-image: url('Images/Rooms/4.png');"></div>
+                <div class="swiper-slide d-flex align-items-center justify-content-center text-center text-white" style="background-image: url('Images/Rooms/5.png');"></div>
+            </div>
+
+            <div class="hero-text position-absolute top-50 start-50 translate-middle text-center text-white">
+                <h1 class="display-4 fw-bold">Our Rooms</h1>
+                <p class="lead mt-3">Experience comfort, style, and luxury in every thoughtfully designed room!</p>
+            </div>
+        </div>
+    </div>
+
     <div class="my-5 px-4">
-        <h2 class="h-font fw-bold text-center">Our Rooms</h2>
+        <h2 class="h-font fw-bold text-center">Explore Our Rooms</h2>
     </div>
 
     <div class="container-fluid">
@@ -134,7 +156,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
-                                    <h6 class="mb-4">LKR $room_data[price] per night</h6>
+                                    <h6 class="mb-4">$$room_data[price] per night</h6>
                                     $book_btn
                                     <a href="room_details.php?id=$room_data[id]" class="btn btn-sm w-100 btn-outline-dark shadow-none">More Details</a>
                                 </div>
@@ -153,6 +175,14 @@
     <!-------------------- Footer -------------------->
 
     <?php require("inc/footer.php");?>
+
+    <!-------------------- Swiper JS -------------------->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-------------------- Initializing Hero Swiper -------------------->
+    <script src="swiper.js"></script>
+
+    
   
 </body>
 </html>

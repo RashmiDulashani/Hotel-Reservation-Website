@@ -1,43 +1,51 @@
 <!-------------------- Footer -------------------->
 
-<div class="container-fluid">
+<div class="container-fluid footer">
     <div class="row justify-content-evenly px-lg-5">
-        <div class="col-lg-4 col-md-4 p-4">
-            <h3 class="h-font fw-bold fs-3 mb-2"><img src="Images/Logo.png" class="img-fluid me-2" style="width: 45px; height: auto;"><?php echo $setting_r['site_title'] ?></h3>
+        <div class="col-lg-3 col-md-4 p-4">
+            <h3 class="fw-bold fs-3 mb-3"><img src="Images/Logo.png" class="img-fluid me-2" style="width: 45px; height: auto;"><?php echo $setting_r['site_title'] ?></h3>
             <p>
                 <?php echo $setting_r['site_about'] ?>
             </p>
 
         </div>
-        <div class="col-lg-4 col-md-4  p-4">
-            <h5 class="mb-3">Link</h5>
-            <a href="index.php" class="d-inline-block mb-2 text-dark text-decoration-none">Home</a> <br>
-            <a href="about.php" class="d-inline-block  mb-2 text-dark text-decoration-none">About</a> <br>
-            <a href="rooms.php" class="d-inline-block  mb-2 text-dark text-decoration-none">Rooms</a> <br>
-            <a href="facilities.php" class="d-inline-block  mb-2 text-dark text-decoration-none">Facilities</a> <br>
-            <a href="#" class="d-inline-block  mb-2 text-dark text-decoration-none">Gallery</a> <br>
-            <a href="contact.php" class="d-inline-block  mb-2 text-dark text-decoration-none">Contact us</a>
+        <div class="col-lg-3 col-md-4  p-4 footer-links">
+            <h4 class="mb-3">Quick Links</h4>
+            <a href="index.php" class="d-inline-block mb-2 text-light text-decoration-none">Home</a> <br>
+            <a href="about.php" class="d-inline-block  mb-2 text-light text-decoration-none">About</a> <br>
+            <a href="rooms.php" class="d-inline-block  mb-2 text-light text-decoration-none">Rooms</a> <br>
+            <a href="facilities.php" class="d-inline-block  mb-2 text-light text-decoration-none">Facilities</a> <br>
+            <a href="gallery.php" class="d-inline-block  mb-2 text-light text-decoration-none">Gallery</a> <br>
+            <a href="contact.php" class="d-inline-block  mb-2 text-light text-decoration-none">Contact us</a>
         </div>
-        <div class="col-lg-4 col-md-4  p-4">
-            <h5 class="mb-3">Follow us</h5>
+        <div class="col-lg-3 col-md-4  p-4">
+            <h4 class="mb-0">Contact us</h4>
+            <br>
+            <a href="tel: +<?php echo $contact_r['pn1']?>" class="d-inline-block mb-3 text-decoration-none text-light"><i class="bi bi-telephone-fill"></i> <?php echo $contact_r['pn1']?></a> <br>          
+            <a href="tel: +<?php echo $contact_r['pn2']?>" class="d-inline-block mb-3 text-decoration-none text-light"><i class="bi bi-telephone-fill"></i> <?php echo $contact_r['pn2']?></a> <br>
+            <a href="<?php echo $contact_r['email']?>" target="_blank" class="d-inline-block text-decoration-none text-light mb-4"><i class="bi bi-envelope-fill"></i> <?php echo $contact_r['email']?></a>
+        </div>
+        <div class="col-lg-3 col-md-4  p-4">
+            <h4 class="mb-3">Follow us</h4>
             <?php
                 if($contact_r["tw"] != "") {
                     echo <<<data
-                    <a href="$contact_r[tw]" target="_blank" class="d-inline-block mb-3 text-dark text-decoration-none">
+                    <a href="$contact_r[tw]" target="_blank" class="d-inline-block mb-3 text-light text-decoration-none">
                         <i class="bi bi-twitter me-1"></i> Twitter
                     </a>
                     data;
                 }
             ?>
             <br>
-            <a href="<?php echo $contact_r['fb']?>" target="_blank" class="d-inline-block mb-3 text-dark text-decoration-none"><i class="bi bi-facebook me-1"></i> Facebook</a> <br>
-            <a href="<?php echo $contact_r['insta']?>" target="_blank" class="d-inline-block mb-3 text-dark text-decoration-none"><i class="bi bi-instagram me-1"></i> Instagram</a>
+            <a href="<?php echo $contact_r['fb']?>" target="_blank" class="d-inline-block mb-3 text-light text-decoration-none"><i class="bi bi-facebook me-1"></i> Facebook</a> <br>
+            <a href="<?php echo $contact_r['insta']?>" target="_blank" class="d-inline-block mb-3 text-light text-decoration-none"><i class="bi bi-instagram me-1"></i> Instagram</a>
 
         </div>
     </div>
 </div>
 
-<h6 class="text-center bg-dark text-white p-3 m-0">Designed and Developed by Rash</h6>
+    <h6 class="copyright text-center text-white p-3 m-0">© 2025 <?php echo $setting_r['site_title'] ?> Hotel. All Rights Reserved</h6>
+
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>

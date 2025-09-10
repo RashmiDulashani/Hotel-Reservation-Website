@@ -89,7 +89,7 @@
                                 Children: $row[children]
                             </span>
                         </td>
-                        <td>LKR $row[price]</td>
+                        <td>$$row[price]</td>
                         <td>$row[quantity]</td>
                         <td>$status</td>
                         <td>

@@ -10,7 +10,7 @@
     <title><?php echo $setting_r['site_title'] ?> - Contact</title>
 
     <!-- Swiper CSS -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
 </head>
 
@@ -20,10 +20,27 @@
 
     <?php require("inc/header.php");?>
 
+    
+    <!-------------------- Hero Carousel -------------------->
+
+    <div class="container-fluid px-0">
+        <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide d-flex align-items-center justify-content-center text-center text-white" style="background-image: url('Images/Facilities/6.jpg');"></div>
+                <div class="swiper-slide d-flex align-items-center justify-content-center text-center text-white" style="background-image: url('Images/Facilities/5.jpg');"></div>
+                <div class="swiper-slide d-flex align-items-center justify-content-center text-center text-white" style="background-image: url('Images/Facilities/4.jpg');"></div>
+            </div>
+
+            <div class="hero-text position-absolute top-50 start-50 translate-middle text-center text-white">
+                <h1 class="display-4 fw-bold">Contact Us</h1>
+                <p class="lead mt-3">Reach out to us for inquiries, reservations, or personalized assistance!</p>
+            </div>
+        </div>
+    </div>
+
     <div class="my-5 px-4">
-        <h2 class="h-font fw-bold text-center">Contact Us</h2>
-        <p class="text-center mt-3">Lorem ipsum, dolor sit amet <br> consectetur adipisicing elit. Voluptatum labore, rem omnis impedit rerum incidunt excepturi 
-            porro ea hic reiciendis.</p>
+        <h2 class="h-font fw-bold text-center">Get in Touch with Us</h2>
+        <p class="text-center mt-3">We’re here to assist you with any questions, reservations, or special requests. <br> Reach out through the form below, call or email us, or visit us at our location using the interactive map. <br> Our team is dedicated to ensuring your experience is seamless and memorable.</p>
     </div>
 
     <div class="container">
@@ -89,7 +106,7 @@
                         </div>
                         <div class="mt-3">
                             <label class="form-label" style="font-weight: 500;">Message</label>
-                            <textarea name ="message" required class="form-control shadow-none" rows="6"></textarea>
+                            <textarea name ="message" required class="form-control shadow-none" rows="14"></textarea>
                         </div>
                         <button type="submit" name="send" class="btn text-white custom-bg mt-3">Send</button>
                     </form>
@@ -125,6 +142,9 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-------------------- Initializing Hero Swiper -------------------->
+    <script src="swiper.js"></script>
   
 </body>
 </html>

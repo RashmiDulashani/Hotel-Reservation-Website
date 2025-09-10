@@ -85,7 +85,7 @@
                     </div>
                         
                         <div class="table-responsive-md" style="height: 450px; overflow-y: scroll;">
-                            <table class="table table-hover border">
+                            <table class="table table-hover border" style="min-width:1500px;">
                                 <thead class="sticky-top">
                                   <tr>
                                     <th scope="col" class="bg-dark text-light">#</th>
@@ -106,9 +106,9 @@
                                         while($row = mysqli_fetch_assoc($data)) {
                                             $seen='';
                                             if($row['seen']!=1) {
-                                                $seen = "<a href='?seen=$row[sr_no]' class='btn btn-sm rounded-pill btn-primary'>Mark as read</a>";
+                                                $seen = "<a href='?seen=$row[sr_no]' class='btn btn-sm rounded-pill btn-primary me-2'>Mark as read</a>";
                                             }
-                                            $seen.="<a href='?del=$row[sr_no]' class='btn btn-sm rounded-pill btn-danger mt-2'>Delete</a>";
+                                            $seen.="<a href='?del=$row[sr_no]' class='btn btn-sm rounded-pill btn-danger'>Delete</a>";
 
                                             echo <<<query
                                                 <tr>

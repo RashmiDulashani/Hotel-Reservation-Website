@@ -134,11 +134,13 @@
                                 <img src="$room_thumb" class="card-img-top">
                                 <div class="card-body">
                                     <h5>$room_data[name]</h5>
-                                    <h6 class="mb-4">LKR $room_data[price] per night</h6>
+                                    <h6 class="mb-4">$$room_data[price] per night</h6>
                                     <div class="features mb-4">
+                                        <h6 class="mb-1">Features</h6>
                                         $features_data
                                     </div>
                                     <div class="facilities mb-4">
+                                        <h6 class="mb-1">Facilities</h6>
                                         $facilities_data
                                     </div>
                                     <div class="guests mb-4">
@@ -173,6 +175,7 @@
         </div>
     </div>
 
+
     <!-------------------- Facilities -------------------->
 
     <h2 class="mt-5 pt-2 mb-4 text-center fw-bold h-font">Our Facilities</h2>
@@ -202,78 +205,79 @@
 
     
     <!-------------------- Testimonials -------------------->
+    <div class="testimonials">
+        <h2 class="mt-5 pt-2 mb-4 text-center fw-bold h-font">Testimonials</h2>
 
-    <h2 class="mt-5 pt-2 mb-4 text-center fw-bold h-font">Testimonials</h2>
-
-    <div class="container mt-5">
-        <!-- Swiper -->
-        <div class="swiper swiper-testimonials">
-            <div class="swiper-wrapper mb-5">
-                <div class="swiper-slide bg-white p-4">
-                    <div class="profile d-flex align-items-center mb-3">
-                        <img src="Images/Facilities/Wifi.svg" width="30px"/>
-                        <h6 class=" m-0 ms-2">Random User1</h6>
+        <div class="container mt-5">
+            <!-- Swiper -->
+            <div class="swiper swiper-testimonials">
+                <div class="swiper-wrapper mb-5">
+                    <div class="swiper-slide bg-white p-4">
+                        <div class="profile d-flex align-items-center mb-3">
+                            <img src="Images/Facilities/Wifi.svg" width="30px"/>
+                            <h6 class=" m-0 ms-2">Random User1</h6>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet repudiandae deleniti repellat laborum 
+                            molestiae minus hic aut consequatur, saepe quaerat?
+                        </p>
+                        <div class="rating">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet repudiandae deleniti repellat laborum 
-                        molestiae minus hic aut consequatur, saepe quaerat?
-                    </p>
-                    <div class="rating">
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
+                    <div class="swiper-slide bg-white p-4">
+                        <div class="profile d-flex align-items-center mb-3">
+                            <img src="Images/Facilities/Wifi.svg" width="30px"/>
+                            <h6 class=" m-0 ms-2">Random User1</h6>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet repudiandae deleniti repellat laborum 
+                            molestiae minus hic aut consequatur, saepe quaerat?
+                        </p>
+                        <div class="rating">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                    </div>
+                    <div class="swiper-slide bg-white p-4">
+                        <div class="profile d-flex align-items-center mb-3">
+                            <img src="Images/Facilities/Wifi.svg" width="30px"/>
+                            <h6 class=" m-0 ms-2">Random User1</h6>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet repudiandae deleniti repellat laborum 
+                            molestiae minus hic aut consequatur.
+                        </p>
+                        <div class="rating">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                    </div>
+                    <div class="swiper-slide bg-white p-4">
+                        <div class="profile d-flex align-items-center mb-3">
+                            <img src="Images/Facilities/Wifi.svg" width="30px"/>
+                            <h6 class=" m-0 ms-2">Random User1</h6>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet repudiandae deleniti repellat laborum 
+                            molestiae minus hic aut consequatur.
+                        </p>
+                        <div class="rating">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="swiper-slide bg-white p-4">
-                    <div class="profile d-flex align-items-center mb-3">
-                        <img src="Images/Facilities/Wifi.svg" width="30px"/>
-                        <h6 class=" m-0 ms-2">Random User1</h6>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet repudiandae deleniti repellat laborum 
-                        molestiae minus hic aut consequatur, saepe quaerat?
-                    </p>
-                    <div class="rating">
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                    </div>
-                </div>
-                <div class="swiper-slide bg-white p-4">
-                    <div class="profile d-flex align-items-center mb-3">
-                        <img src="Images/Facilities/Wifi.svg" width="30px"/>
-                        <h6 class=" m-0 ms-2">Random User1</h6>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet repudiandae deleniti repellat laborum 
-                        molestiae minus hic aut consequatur.
-                    </p>
-                    <div class="rating">
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                    </div>
-                </div>
-                <div class="swiper-slide bg-white p-4">
-                    <div class="profile d-flex align-items-center mb-3">
-                        <img src="Images/Facilities/Wifi.svg" width="30px"/>
-                        <h6 class=" m-0 ms-2">Random User1</h6>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet repudiandae deleniti repellat laborum 
-                        molestiae minus hic aut consequatur.
-                    </p>
-                    <div class="rating">
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                    </div>
-                </div>
+                <div class="swiper-pagination"></div>
             </div>
-            <div class="swiper-pagination"></div>
-        </div>
-        <div class="col-lg-12 text-center mt-5">
-            <a href="about.php" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">Know More >>></a>
+            <div class="col-lg-12 text-center mt-5">
+                <a href="about.php" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none mb-4">Know More >>></a>
+            </div>
         </div>
     </div>
 

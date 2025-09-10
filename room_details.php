@@ -84,7 +84,7 @@
                     <div class="card-body">
                         <?php
                             echo <<<price
-                                <h4>LKR $room_data[price] per night</h4>
+                                <h4>$$room_data[price] per night</h4>
                             price;
 
                             echo <<<rating
