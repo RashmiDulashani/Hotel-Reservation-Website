@@ -61,7 +61,7 @@
 
                 while($row = mysqli_fetch_assoc($res)) {
                     echo <<<data
-                    <div class="col-lg-4 col-md-6 mb-5 px-4 pt-5">
+                    <div class="col-lg-4 col-md-6 mb-5 px-4 pt-2">
                         <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
                             <div class="d-flex align-items-center mb-2">
                                 <img src="$path$row[icon]" width="40px">

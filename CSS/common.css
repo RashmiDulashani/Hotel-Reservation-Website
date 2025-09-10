@@ -21,11 +21,6 @@ h1, h2, h3, h4 {
     font-weight: 600;
 }
 
-.h-font {
-    color: var(--primary-color);
-
-}
-
 .custom-bg {
     background-color: var(--teal);
     border: 1px solid var(--teal);
@@ -34,6 +29,15 @@ h1, h2, h3, h4 {
 .custom-bg:hover {
     background-color: var(--teal_hover);
     border-color: var(--teal_hover);
+}
+
+#nav-bar li a.active {
+    background-color: var(--primary-color);
+    color: white !important;   
+    border-radius: 15px;         
+    padding: 6px 14px;           
+    font-weight: normal;        
+    transition: background 0.3s;
 }
 
 .availability-form {
@@ -49,10 +53,18 @@ h1, h2, h3, h4 {
     z-index: 111;
 }
 
+.h-font span {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.3rem 3rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+    text-align: center;
+ }
+
 .msg {
     padding: 30px 0;
-    border-bottom: solid black;
-    border-top: solid black;
+    border-bottom: solid var(--secondary-color);
+    border-top: solid var(--secondary-color);
 }
 
 .footer {

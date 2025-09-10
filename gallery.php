@@ -190,7 +190,7 @@
     </div>
 
     <!-- Gallery Section -->
-    <section class="py-5">
+    <section class="pt-5 pb-3">
         <div class="container">
 
             <!-- Filter Buttons -->

@@ -44,7 +44,7 @@
     </div>
 
     <div class="my-5 px-4">
-        <h2 class="h-font fw-bold text-center">Message from Our Chairman</h2>
+        <h2 class="h-font fw-bold text-center"><span>Message from Chairman</span></h2>
     </div>
 
     <div class="container">

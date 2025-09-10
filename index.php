@@ -214,12 +214,10 @@
                 <div class="swiper-wrapper mb-5">
                     <div class="swiper-slide bg-white p-4">
                         <div class="profile d-flex align-items-center mb-3">
-                            <img src="Images/Facilities/Wifi.svg" width="30px"/>
-                            <h6 class=" m-0 ms-2">Random User1</h6>
+                            <img src="Images/Gallery/2.jpg" width="30px"/>
+                            <h6 class=" m-0 ms-2">Sarah Johnson</h6>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet repudiandae deleniti repellat laborum 
-                            molestiae minus hic aut consequatur, saepe quaerat?
-                        </p>
+                        <p>“The room was spotless and very comfortable. I especially loved the ocean view from the balcony. The staff was attentive and always ready to help. I’ll definitely come back again!”</p>
                         <div class="rating">
                             <i class="bi bi-star-fill text-warning"></i>
                             <i class="bi bi-star-fill text-warning"></i>
@@ -229,12 +227,10 @@
                     </div>
                     <div class="swiper-slide bg-white p-4">
                         <div class="profile d-flex align-items-center mb-3">
-                            <img src="Images/Facilities/Wifi.svg" width="30px"/>
-                            <h6 class=" m-0 ms-2">Random User1</h6>
+                            <img src="Images/Gallery/4.jpg" width="30px"/>
+                            <h6 class=" m-0 ms-2">Arjun Perera</h6>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet repudiandae deleniti repellat laborum 
-                            molestiae minus hic aut consequatur, saepe quaerat?
-                        </p>
+                        <p>“A great stay overall! The check-in was smooth, and the breakfast buffet had so many delicious options. Only downside was the Wi-Fi speed in my room, but everything else was perfect.”</p>
                         <div class="rating">
                             <i class="bi bi-star-fill text-warning"></i>
                             <i class="bi bi-star-fill text-warning"></i>
@@ -244,12 +240,10 @@
                     </div>
                     <div class="swiper-slide bg-white p-4">
                         <div class="profile d-flex align-items-center mb-3">
-                            <img src="Images/Facilities/Wifi.svg" width="30px"/>
-                            <h6 class=" m-0 ms-2">Random User1</h6>
+                            <img src="Images/Gallery/3.jpg" width="30px"/>
+                            <h6 class=" m-0 ms-2">Emily Carter</h6>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet repudiandae deleniti repellat laborum 
-                            molestiae minus hic aut consequatur.
-                        </p>
+                        <p>“The spa service was incredible - very relaxing after a long day of travel. Rooms were well designed with modern facilities. Highly recommended for couples and families.”</p>
                         <div class="rating">
                             <i class="bi bi-star-fill text-warning"></i>
                             <i class="bi bi-star-fill text-warning"></i>
@@ -259,12 +253,10 @@
                     </div>
                     <div class="swiper-slide bg-white p-4">
                         <div class="profile d-flex align-items-center mb-3">
-                            <img src="Images/Facilities/Wifi.svg" width="30px"/>
-                            <h6 class=" m-0 ms-2">Random User1</h6>
+                            <img src="Images/Gallery/6.jpg" width="30px"/>
+                            <h6 class=" m-0 ms-2">Dilan Fernando</h6>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet repudiandae deleniti repellat laborum 
-                            molestiae minus hic aut consequatur.
-                        </p>
+                        <p>“Friendly staff and excellent service. The location is convenient, just minutes away from the beach. The pool area is clean and peaceful. Worth the price for the comfort provided.”</p>
                         <div class="rating">
                             <i class="bi bi-star-fill text-warning"></i>
                             <i class="bi bi-star-fill text-warning"></i>
@@ -276,7 +268,7 @@
                 <div class="swiper-pagination"></div>
             </div>
             <div class="col-lg-12 text-center mt-5">
-                <a href="about.php" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none mb-4">Know More >>></a>
+                <a href="about.php" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">Know More >>></a>
             </div>
         </div>
     </div>
@@ -287,7 +279,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-md-8 p-4 mb-lg-0 mb-3 bg-white rounded">
+            <div class="col-lg-8 col-md-8 mt-2 mb-lg-4 mb-3 bg-white rounded">
                 <iframe class="w-100 rounded" height="350" src="<?php echo $contact_r['iframe']?>"></iframe>
             </div>
             <div class="col-lg-4 col-md-4">
