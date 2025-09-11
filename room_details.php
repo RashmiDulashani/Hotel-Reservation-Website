@@ -144,7 +144,11 @@
                             $book_btn = "";
 
                             if(!$setting_r['shutdown']) {
-                                $book_btn = "<a href='#' class='btn w-100 text-white custom-bg shadow-none mb-1'>Book Now</a>";
+                                $login = 0;
+                                if(isset($_SESSION['login']) && $_SESSION['login']==true) {
+                                    $login = 1;
+                                }
+                                $book_btn = "<button onclick='checkLoginToBook($login,$room_data[id])' class='btn btn-sm w-100 text-white custom-bg shadow-none mb-2'>Book Now</button>";
                             }
 
                             echo <<<book
@@ -167,12 +171,10 @@
                 <div>
                     <h5 class="mb-3">Reviews & Ratings</h5>
                     <div class="d-flex align-items-center mb-2">
-                        <img src="Images/Facilities/Wifi.svg" width="30px"/>
-                        <h6 class=" m-0 ms-2">Random User1</h6>
+                        <img src="Images/Gallery/2.jpg" width="30px"/>
+                        <h6 class=" m-0 ms-2">Sarah Johnson</h6>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet repudiandae deleniti repellat laborum 
-                        molestiae minus hic aut consequatur, saepe quaerat?
-                    </p>
+                    <p>"I stayed here for two nights and the experience was amazing. The room was clean, spacious, and the sea view from the balcony was breathtaking. The staff was friendly and helpful, and the Wi-Fi was strong enough for my work. Definitely worth the price and I’ll book again!"</p>
                     <div class="rating">
                         <i class="bi bi-star-fill text-warning"></i>
                         <i class="bi bi-star-fill text-warning"></i>
